@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width">
+  <link href="/favicon.png" rel="icon">
+  <title>{{title}} - HAL2012</title>
+  <link rel="stylesheet" href="/main.css"  />
+  <script data-main="/scripts/app/main" src="/scripts/vendor/require.js"></script>
+</head>
+<body>
+  <div class="wrap">
+  <img src="/favicon.png">
+  <h1><a href="{{ mountPath }}">HAL2012</a></h1>
+  <p>Page: {{title}}</p>
+
+  <p class="state">
+      Up since <span id="up">{{ db.up }}</span> ago
+  </p>
+  <p class="state">
+      Down since <span id="down">{{ db.down }}</span> ago
+  </p>
+
+  <div class="buttons">
+    <a href="{{ mountPath }}/power/on">Power on</a>
+    <a href="{{ mountPath }}/power/off">Power off</a>
+    <a href="{{ mountPath }}/wake">Wake up</a>
+  </div>
+  </div>
+</body>
+</html>
